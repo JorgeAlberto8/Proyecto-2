@@ -1,4 +1,4 @@
-# Ajedrez 🎮
+# AJEDREZ 🎮
 ![alt text](image.png)
 
 ## Authors
