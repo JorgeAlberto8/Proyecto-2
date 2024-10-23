@@ -1,4 +1,51 @@
 #include <stdio.h>
-#include <stblid.h>
+#include <stdlib.h>
 
 typedef struct Casilla {
+    char pieza;
+    struct Casilla *next;
+    struct Casilla *down;
+} Casilla;
+
+Casilla* crearCasilla(char pieza) {
+    Casilla* nueva = (Casilla*)malloc(sizeof(Casilla));
+    nueva->pieza = pieza;
+    nueva->next = NULL;
+    nueva->down = NULL;
+    return nueva;
+}
+
+Casilla* crearTablero (){
+    Casilla* head = NULL;
+    Casilla* currentRow = NULL;
+    Casilla* previousRow = NULL;
+
+    for (int i = 0; 0 < 8; i++) {
+        Casilla* currentCol = NULL;
+        Casilla* previousCol = NULL;
+
+        for (int j = 0; j < 8; j++) {
+            currentCol = crearCasilla(".");
+
+            if (j == 0) {
+                currentRow = currentCol;
+            } else {
+                previousCol->next = currentCol;
+            }
+            if (i == 0) {
+                if (j == 0) {
+                    head = currentCol;
+                }
+            } else {
+                previousRow->down = currentCol;
+                previousRow = previousRow->next;
+            }
+
+            previousCol = currentCol;
+        } 
+
+        previousRow = currentRow;
+    }
+    return head;
+}
+
