@@ -3,5 +3,5 @@
 
 ## Authors
 
-- [@JorgeAlberto8][https://github.com/JorgeAlberto8]
-- [@MiguelCanales1][https://github.com/MiguelCanales1]
+- @JorgeAlbertoElviraCarvajal[https://github.com/JorgeAlberto8]
+- @MiguelEduardoCanalesSanchez[https://github.com/MiguelCanales1]
