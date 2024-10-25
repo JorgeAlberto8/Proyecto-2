@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compilar archivo C",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "${file}",  // Este es el archivo C que está abierto
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"  // Nombre del archivo de salida
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compilación de archivo C"
+        }
+    ]
+}
